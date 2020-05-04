@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EvenzOne</title>
+    <link href="css/serviceStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body bgcolor="#204051">
+    <div class="topnav" id="navig">
+      <a href="contact.html" class="btn">Contact Us</a>
+      <a href="gallery.html" class="btn">Gallery</a>
+      <a href="services.html" class="btn active">Services</a>
+      <a href="index.html" class="btn">Home</a>
+    </div>
+    <script>
+      var serviceList = [
+  {
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+        cum quaerat nobis harum necessitatibus enim laboriosam vitae dolorum
+        dolore corrupti earum saepe doloribus aperiam esse, ipsam sit fugiat
+        nam magni sunt excepturi officia consequunt
+        eligendi. Quia odio eum voluptatibus, necessitatibus fuga ullam?
+        Corporis culpa ducimus repudiandae praesentium est! Beatae!`,
+    title: "WEDDING PLANNING",
+    imageSrc: "image/wedding.jpg",
+    contentClass : "content-odd"
+  },
+  {
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+        cum quaerat nobis harum necessitatibus enim laboriosam vitae dolorum
+        dolore corrupti earum saepe doloribus aperiam esse, ipsam sit fugiat
+        nam magni sunt excepturi 
+        eligendi. Quia odio eum voluptatibus, necessitatibus fuga ullam?
+        Corporis culpa ducimus repudiandae praesentium est! Beatae!`,
+    title: "BUSINESS MEETUPS",
+    imageSrc: "image/meetups.jpg",
+    contentClass : "content-even"
+  },
+  {
+    description: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti
+        cum quaerat nobis harum necessitatibus enim laboriosam vitae dolorum
+        dolore corrupti earum saepe doloribus aperiam esse, ipsam sit fugiat
+        nam magni sunt excepturi officia 
+        eligendi. Quia odio eum voluptatibus, necessitatibus fuga ullam?
+        Corporis culpa ducimus repudiandae praesentium est! Beatae!`,
+    title: "CELEBRITY MANAGEMENT",
+    imageSrc: "image/celebrity.jpg",
+    contentClass : "content-odd"
+  },
+
+];
+
+serviceList.map((service, index) => {
+  index % 2 == 0
+    ? document.write(
+        `<section class="section">
+        <div class=`+service.contentClass+`>
+          <h2><strong>` +
+          service.title +
+          `</strong></h2>
+          <p>
+          ` +
+          service.description +
+          `
+          </p>
+        </div>
+    
+        <div class="image-content">
+          <img
+            class= "image"
+            src=` +
+          service.imageSrc +
+          `
+            alt="Wedding Planning"
+            width="42"
+            height="42"
+          />
+        </div>
+      </section>`
+      )
+    : document.write(
+        `<section class="section">
+        <div class="image-content">
+          <img
+            class= "image"
+            src=` +
+          service.imageSrc +
+          `
+            alt="Wedding Planning"
+            width="42"
+            height="42"
+          />
+        </div>
+        <div class=`+service.contentClass+`>
+          <h2>` +
+          service.title +
+          `</h2>
+          <p>
+          ` +
+          service.description +
+          `
+          </p>
+        </div>
+      </section>`
+      );
+});
+
+
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EvenzOne</title>
+    <link href="css/galleryStyle.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+  </head>
+  <body>
+    <div class="topnav" id="navig">
+      <a href="contact.html" class="btn">Contact Us</a>
+      <a href="gallery.html" class="btn active">Gallery</a>
+      <a href="services.html" class="btn">Services</a>
+      <a href="index.html" class="btn">Home</a>
+    </div>
+
+    <div>
+      <div>
+        <script>
+          var galleryList = [
+  {
+    imgSrc: "image/google.jpg",
+    description: "BANGALORE",
+    date: "2019",
+  },
+  {
+    imgSrc: "image/wedding1.jpg",
+    description: "BALI",
+    date: "2018",
+  },
+  {
+    imgSrc: "image/microsoft.jpg",
+    description: "CHENNAI",
+    date: "2019",
+  },
+  {
+    imgSrc: "image/wedding2.jpg",
+    description: "DELHI",
+    date: "2020",
+  },
+  {
+    imgSrc: "image/model1.jpg",
+    description: "BEIJING",
+    date: "2020",
+  },
+  {
+    imgSrc: "image/model2.jpg",
+    description: "THAILAND",
+    date: "2018",
+  },
+ 
+];
+
+galleryList.map((image) => {
+  document.write(
+    `<div class="gallery">
+      <a target="_blank" href="img_5terre.jpg">
+        <img
+          src=` +
+      image.imgSrc +
+      `
+          alt="Cinque Terre"
+          width="600"
+          height="400"
+        />
+      </a>
+     <div class="meta-content">
+     <h4 >` +
+      image.description +
+      `</h4>
+     <p>` +
+      image.date +
+      `</p>
+     </div>
+    </div>`
+  );
+});
+
+        </script>
+      </div>
+    </div>
+  </body>
+</html>

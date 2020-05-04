@@ -1,0 +1,33 @@
+
+
+.section{
+    display: flex;
+    padding: 40px !important;
+    
+}
+
+.content-even {
+    padding: 12px;
+    height : 300px;
+    width: 50%;
+    background-color:#84a9ac;
+    overflow: auto;
+}
+
+.content-odd {
+    padding: 12px;
+    height : 300px;
+    width: 50%;
+    background-color:#cae8d5;
+    overflow: auto;
+}
+.image-content{
+    padding: 12px;
+    height : 300px;
+    width: auto;
+}
+
+.image{
+    width: auto;
+    height: -webkit-fill-available;
+}
